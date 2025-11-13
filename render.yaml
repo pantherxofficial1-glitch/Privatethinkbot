@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: telegram-bot
+    env: php
+    plan: free
+    buildCommand: ""
+    startCommand: "php -S 0.0.0.0:8000 -t public"
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        value: 8539631877:AAHQqWwmjvAj2Vaitrj2aETx_e3JweH0CwA
