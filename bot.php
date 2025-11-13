@@ -1,7 +1,17 @@
 <?php
-// Telegram Bot - Channel Join Verification with Image & Proper Design
+// Add this at the very top - Simple router for web requests
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && php_sapi_name() !== 'cli') {
+    header('Content-Type: text/plain; charset=UTF-8');
+    echo "🤖 Telegram Bot is Running!\n\n";
+    echo "Status: ✅ Active\n";
+    echo "Webhook: ✅ Ready\n";
+    echo "Time: " . date('Y-m-d H:i:s') . "\n";
+    exit;
+}
 
+// Your existing bot code continues here...
 const BOT_TOKEN = '8539631877:AAHQqWwmjvAj2Vaitrj2aETx_e3JweH0CwA';
+// ... rest of your existing code
 const LOG_FILE = 'logs.json';
 const ADMIN_FILE = 'admin_data.json';
 
